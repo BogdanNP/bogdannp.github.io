@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Personal portfolio — Flutter mobile dev, state management, Firebase, project management" />
+  <title>My Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    /* Floating & gradient animations */
+    @keyframes float { 0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)} }
+    @keyframes gradientMove{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+    .float { animation: float 3.5s ease-in-out infinite; }
+    .gradient-anim{ background: linear-gradient(270deg,#a5b4fc,#c084fc,#fbcfe8); background-size:600% 600%; animation: gradientMove 15s ease infinite; }
+
+    /* Phone mockup styles */
+    .phone-frame{ border-radius:34px; overflow:hidden; width:100%; max-width:320px; margin:0 auto; background:#0b0b0b; padding:12px; box-shadow:0 12px 30px rgba(2,6,23,0.15); transition:transform .35s cubic-bezier(.2,.9,.3,1), box-shadow .35s; }
+    .phone-frame:hover{ transform:translateY(-8px) rotate(-3deg) scale(1.03); box-shadow:0 20px 40px rgba(2,6,23,0.18); }
+    .phone-screen{ background:#fff; border-radius:20px; overflow:hidden; height:640px; display:flex; align-items:center; justify-content:center; }
+    .phone-screen img{ width:100%; height:100%; object-fit:cover; display:block; }
+
+    /* small helper */
+    .kbd{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', 'Courier New', monospace; font-size:.85rem }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-purple-50 text-gray-800">
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur-sm shadow-sm" data-aos="fade-down">
+    <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
+      <div class="flex items-center gap-4">
+        <div class="w-10 h-10 rounded-full bg-indigo-500 flex items-center justify-center text-white font-semibold">YN</div>
+        <div>
+          <div class="text-lg font-bold text-indigo-600">[Your Name]</div>
+          <div class="text-xs text-gray-500">Flutter Developer • PM • Mobile specialist</div>
+        </div>
+      </div>
+      <nav class="hidden sm:flex gap-6 text-sm">
+        <a href="#about" class="hover:text-indigo-600">About</a>
+        <a href="#knowledge" class="hover:text-indigo-600">Knowledge</a>
+        <a href="#projects" class="hover:text-indigo-600">Projects</a>
+        <a href="#gallery" class="hover:text-indigo-600">Photos</a>
+        <a href="#contact" class="hover:text-indigo-600">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="gradient-anim text-center py-20 relative overflow-hidden" data-aos="zoom-in">
+    <div class="max-w-3xl mx-auto px-4">
+      <img src="https://via.placeholder.com/140" alt="profile" class="w-36 h-36 rounded-full mx-auto border-4 border-white shadow-lg transform hover:scale-105 transition duration-500 float" />
+      <h1 class="text-4xl sm:text-5xl font-extrabold text-white mt-6 drop-shadow-lg">Hi — I'm [Your Name]</h1>
+      <p class="mt-3 text-white/90 text-lg max-w-2xl mx-auto drop-shadow">I design and build delightful cross-platform mobile apps with Flutter. I focus on robust state management, Firebase integrations, polished releases and effective team collaboration.</p>
+      <div class="mt-6 flex items-center justify-center gap-3">
+        <a href="#projects" class="px-5 py-2 rounded-full bg-white/90 text-indigo-700 font-medium shadow hover:scale-105 transition">See Projects</a>
+        <a href="#contact" class="px-5 py-2 rounded-full border border-white/30 text-white/90 hover:bg-white/10 transition">Get in touch</a>
+      </div>
+    </div>
+    <!-- subtle decorative circles -->
+    <div class="absolute -right-16 -top-10 w-72 h-72 rounded-full bg-white/5 blur-3xl"></div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="max-w-5xl mx-auto px-6 py-12" data-aos="fade-up">
+    <h2 class="text-2xl font-bold text-indigo-600 mb-4">About Me</h2>
+    <p class="text-gray-700 leading-relaxed">I specialize in Flutter mobile development — building performant, accessible, and maintainable apps. I combine hands-on development with product-thinking: planning features, breaking down tasks, and collaborating across design and engineering to ship quality software.</p>
+  </section>
+
+  <!-- Knowledge -->
+  <section id="knowledge" class="bg-white/80 py-12" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-2xl font-bold text-indigo-600 mb-6">Core Knowledge</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article class="p-5 bg-indigo-50 rounded-xl shadow-sm" data-aos="fade-up">
+          <h3 class="font-semibold mb-2">Mobile Development — Flutter</h3>
+          <p class="text-sm text-gray-700">Cross-platform apps with expressive UIs, responsive layouts, accessibility, animations, and platform integrations.</p>
+        </article>
+
+        <article class="p-5 bg-indigo-50 rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="80">
+          <h3 class="font-semibold mb-2">State Management</h3>
+          <p class="text-sm text-gray-700">Deep experience with Provider, BLoC pattern, and Command patterns — structuring apps for testability and predictable state flows.</p>
+        </article>
+
+        <article class="p-5 bg-indigo-50 rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="160">
+          <h3 class="font-semibold mb-2">Firebase Ecosystem</h3>
+          <p class="text-sm text-gray-700">Auth, Analytics, Crashlytics, Remote Config / A-B Testing, Cloud Messaging, Firestore/Realtime DB — from setup to production monitoring.</p>
+        </article>
+
+        <article class="p-5 bg-indigo-50 rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="240">
+          <h3 class="font-semibold mb-2">API Integration</h3>
+          <p class="text-sm text-gray-700">REST/GraphQL integration, error handling, retries, caching strategies and secure token management.</p>
+        </article>
+
+        <article class="p-5 bg-indigo-50 rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="320">
+          <h3 class="font-semibold mb-2">App Release</h3>
+          <p class="text-sm text-gray-700">Signing, versioning, Play Store & App Store submissions, staged rollouts, release notes and crash monitoring practices.</p>
+        </article>
+
+        <article class="p-5 bg-indigo-50 rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="400">
+          <h3 class="font-semibold mb-2">Project Management</h3>
+          <p class="text-sm text-gray-700">Feature planning, MVP scoping, task breakdowns, sprint workflows (Agile), collaboration tools and stakeholder communication.</p>
+        </article>
+
+        <article class="p-5 bg-indigo-50 rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="480">
+          <h3 class="font-semibold mb-2">Testing & QA</h3>
+          <p class="text-sm text-gray-700">Unit, widget and integration tests in Flutter, CI pipelines, and automated test strategies.</p>
+        </article>
+
+        <article class="p-5 bg-indigo-50 rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="560">
+          <h3 class="font-semibold mb-2">Performance</h3>
+          <p class="text-sm text-gray-700">Profiling, memory usage improvements, frame-budget awareness, image optimization and build-time improvements.</p>
+        </article>
+
+        <article class="p-5 bg-indigo-50 rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="640">
+          <h3 class="font-semibold mb-2">Mentorship & Sharing</h3>
+          <p class="text-sm text-gray-700">Code reviews, mentoring juniors, documentation and internal workshops to grow team knowledge.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects with phone mockups -->
+  <section id="projects" class="max-w-6xl mx-auto px-6 py-12" data-aos="fade-up">
+    <h2 class="text-2xl font-bold text-indigo-600 mb-6">Selected Projects</h2>
+    <p class="mb-6 text-gray-600">Click each mockup to open the full-size screenshot. Replace <code class="kbd">images/projectX.png</code> with your screenshots.</p>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Project 1 -->
+      <div class="flex flex-col items-center gap-4" data-aos="zoom-in">
+        <div class="phone-frame cursor-pointer" onclick="openImage('images/project1.png')">
+          <div class="phone-screen">
+            <img src="images/project1.png" alt="Project 1 screenshot" />
+          </div>
+        </div>
+        <div class="text-center">
+          <h3 class="font-semibold">Project One</h3>
+          <p class="text-sm text-gray-600">E-commerce app — payments, product feeds, cart sync.</p>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="flex flex-col items-center gap-4" data-aos="zoom-in" data-aos-delay="120">
+        <div class="phone-frame cursor-pointer" onclick="openImage('images/project2.png')">
+          <div class="phone-screen">
+            <img src="images/project2.png" alt="Project 2 screenshot" />
+          </div>
+        </div>
+        <div class="text-center">
+          <h3 class="font-semibold">Project Two</h3>
+          <p class="text-sm text-gray-600">Social app — realtime updates, push notifications, analytics.</p>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="flex flex-col items-center gap-4" data-aos="zoom-in" data-aos-delay="240">
+        <div class="phone-frame cursor-pointer" onclick="openImage('images/project3.png')">
+          <div class="phone-screen">
+            <img src="images/project3.png" alt="Project 3 screenshot" />
+          </div>
+        </div>
+        <div class="text-center">
+          <h3 class="font-semibold">Project Three</h3>
+          <p class="text-sm text-gray-600">Productivity app — offline-first, sync, feature flags.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo gallery (optional) -->
+  <section id="gallery" class="bg-white/80 py-12" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-2xl font-bold text-indigo-600 mb-6">Photo Gallery</h2>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <img src="images/photo1.jpg" alt="photo 1" class="rounded-lg shadow-md hover:scale-105 transition" />
+        <img src="images/photo2.jpg" alt="photo 2" class="rounded-lg shadow-md hover:scale-105 transition" />
+        <img src="images/photo3.jpg" alt="photo 3" class="rounded-lg shadow-md hover:scale-105 transition" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="max-w-5xl mx-auto px-6 py-12 text-center" data-aos="fade-up">
+    <h2 class="text-2xl font-bold text-indigo-600 mb-4">Let's talk</h2>
+    <p class="text-gray-700 mb-4">Email: <a class="text-indigo-600 underline" href="mailto:you@example.com">you@example.com</a></p>
+    <p class="text-sm text-gray-500">Available for contract work, mentorship, and full-time roles.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 text-sm text-gray-500 border-t">
+    <div class="max-w-6xl mx-auto px-6">© <span id="year"></span> [Your Name]. All rights reserved.</div>
+  </footer>
+
+  <!-- Lightbox script (opens image in new tab) and interactions -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function openImage(path){ window.open(path, '_blank'); }
+    // parallax-like effect for hero background (subtle)
+    window.addEventListener('scroll', function(){
+      const hero = document.getElementById('hero');
+      if(!hero) return;
+      hero.style.backgroundPositionY = (window.scrollY * 0.4) + 'px';
+    });
+  </script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ duration: 700, once: true });</script>
+</body>
+</html>

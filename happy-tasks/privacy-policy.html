@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Happy Tasks</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .app-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .last-updated {
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        section {
+            margin-bottom: 35px;
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+
+        h3 {
+            color: #444;
+            font-size: 1.15rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        ul {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            border-radius: 0 10px 10px 0;
+            margin: 20px 0;
+        }
+
+        .highlight p {
+            margin: 0;
+            color: #444;
+        }
+
+        .no-collection-box {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .no-collection-box h3 {
+            color: #2e7d32;
+            margin-top: 0;
+        }
+
+        .no-collection-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .no-collection-box li {
+            padding: 8px 0;
+            color: #2e7d32;
+        }
+
+        .no-collection-box li::before {
+            content: "✓ ";
+            font-weight: bold;
+        }
+
+        .permission-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+            border: 1px solid #e9ecef;
+        }
+
+        .permission-card h3 {
+            margin-top: 0;
+            color: #667eea;
+        }
+
+        .future-box {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .future-box h3 {
+            color: #e65100;
+            margin-top: 0;
+        }
+
+        footer {
+            background: #f8f9fa;
+            padding: 30px 40px;
+            text-align: center;
+            border-top: 1px solid #eee;
+        }
+
+        footer p {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .platforms {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .platform-badge {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        strong {
+            color: #333;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            header {
+                padding: 30px 20px;
+            }
+
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .content {
+                padding: 25px 20px;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            .platforms {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="app-icon">✅</div>
+            <h1>Privacy Policy</h1>
+            <p class="last-updated">Last Updated: February 2026</p>
+        </header>
+
+        <div class="content">
+            <section>
+                <h2>Introduction</h2>
+                <p>Happy Tasks ("the App") is a task management application designed with your privacy in mind. This Privacy Policy explains how the App handles your data.</p>
+            </section>
+
+            <section>
+                <h2>Data Storage and Collection</h2>
+                
+                <h3>🔒 Local-Only Storage</h3>
+                <div class="highlight">
+                    <p>Happy Tasks stores all your data <strong>locally on your device</strong>. Your data <strong>never leaves your device</strong>.</p>
+                </div>
+                
+                <p>This includes:</p>
+                <ul>
+                    <li>Tasks and subtasks you create</li>
+                    <li>Categories you define</li>
+                    <li>App preferences and settings (theme, notifications, etc.)</li>
+                </ul>
+
+                <div class="no-collection-box">
+                    <h3>🛡️ No Data Collection</h3>
+                    <p>Happy Tasks does <strong>not</strong> collect, transmit, or share any personal information:</p>
+                    <ul>
+                        <li>We do <strong>not</strong> collect personal identifiable information</li>
+                        <li>We do <strong>not</strong> track your usage or behavior</li>
+                        <li>We do <strong>not</strong> use analytics services</li>
+                        <li>We do <strong>not</strong> display advertisements</li>
+                        <li>We do <strong>not</strong> transmit any data to external servers</li>
+                    </ul>
+                </div>
+
+                <h3>📵 No Account Required</h3>
+                <p>The App works entirely offline and does not require you to create an account or provide any personal information to use it.</p>
+            </section>
+
+            <section>
+                <h2>Permissions</h2>
+                <p>Happy Tasks may request the following permissions:</p>
+
+                <div class="permission-card">
+                    <h3>🔔 Notifications (Optional)</h3>
+                    <p>If you choose to enable task reminders, the App will request permission to send local notifications. These notifications are scheduled and displayed entirely on your device and do not involve any external servers.</p>
+                </div>
+
+                <div class="permission-card">
+                    <h3>🌐 Internet Access</h3>
+                    <p>The App may request internet permission for potential future features. However, in the current version, <strong>no data is transmitted over the internet</strong>.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Data Security</h2>
+                <p>Since all data is stored locally on your device:</p>
+                <ul>
+                    <li>Your data is protected by your device's security features (screen lock, encryption, etc.)</li>
+                    <li>Uninstalling the App will permanently delete all associated data</li>
+                    <li>The App does not have access to any data outside of its own storage</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Children's Privacy</h2>
+                <p>Happy Tasks does not collect any personal information from anyone, including children under the age of 13.</p>
+            </section>
+
+            <section>
+                <h2>Changes to This Privacy Policy</h2>
+                <p>We may update this Privacy Policy from time to time. Any changes will be reflected in the "Last Updated" date at the top of this policy. We encourage you to review this Privacy Policy periodically.</p>
+            </section>
+
+            <section>
+                <div class="future-box">
+                    <h3>🚀 Future Features</h3>
+                    <p>In future versions, Happy Tasks may offer optional cloud synchronization features. If such features are added:</p>
+                    <ul>
+                        <li>They will be entirely optional</li>
+                        <li>You will be clearly informed before any data is transmitted</li>
+                        <li>A separate consent will be required</li>
+                        <li>This Privacy Policy will be updated accordingly</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Contact Us</h2>
+                <p>If you have any questions about this Privacy Policy, please open an issue on our GitHub repository.</p>
+            </section>
+
+            <section>
+                <h2>Your Consent</h2>
+                <p>By using Happy Tasks, you consent to this Privacy Policy.</p>
+            </section>
+        </div>
+
+        <footer>
+            <p>This privacy policy applies to the Happy Tasks application.</p>
+            <div class="platforms">
+                <span class="platform-badge">📱 Android</span>
+                <span class="platform-badge">🍎 iOS</span>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
